@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOTSH!T HAIR CO. | Handcrafted Hair Tonics</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#292522',
+            dark: '#332D29',
+            cream: '#F1EDE5',
+            gold: '#C6A15B',
+            muted: '#B8ADA0'
+          },
+          fontFamily: {
+            display: ['Barlow Condensed', 'sans-serif'],
+            sans: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #F1EDE5;
+      color: #292522;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .display {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      line-height: .88;
+      letter-spacing: -.025em;
+    }
+
+    .hero-title {
+      font-size: clamp(3.25rem, 14vw, 7rem);
+    }
+
+    .hero-title-accent {
+      letter-spacing: .025em;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: #C6A15B;
+      opacity: .7;
+    }
+
+    .image-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-image {
+      background:
+        linear-gradient(90deg, rgba(35,29,26,.12), rgba(35,29,26,.05)),
+        url('hair.jpg') center 35% / cover;
+    }
+
+    .grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: .16;
+    }
+
+    .product-card img,
+    .story-card img {
+      transition: transform .7s ease;
+    }
+
+    .product-card:hover img,
+    .story-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .letter-spacing {
+      letter-spacing: .22em;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    @media(max-width: 640px) {
+      .section-title { font-size: clamp(3.5rem, 15vw, 5rem); }
+    }
+
+    @media(min-width: 768px) {
+      .hero-title { font-size: clamp(3.5rem, 7.8vw, 8.5rem); }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
+<header class="relative z-20 bg-ink text-white px-5 md:px-12 py-4">
+  <div class="relative max-w-7xl mx-auto flex items-center justify-between">
+
+    <nav class="flex flex-col items-start gap-1 text-[8px] font-bold leading-3 tracking-[.06em] uppercase lg:flex-row lg:items-center lg:gap-9 lg:text-[10px] lg:leading-normal lg:tracking-[.2em]">
+      <a href="#products" class="hover:text-gold transition">The Goods</a>
+      <a href="#story" class="hover:text-gold transition">Our Roots</a>
+      <a href="#difference" class="hover:text-gold transition">Our Difference</a>
+    </nav>
+
+    <a href="#" class="absolute left-1/2 top-0 z-10 block h-[61px] w-20 shrink-0 -translate-x-1/2 lg:w-28">
+      <!-- LOGO: place logo(3).png beside index.html -->
+      <img src="logo-png.png"
+           alt="HOTSH!T Hair Co."
+           class="absolute left-0 top-0 w-20 lg:w-28 max-w-none h-auto object-contain">
+    </a>
+
+    <a href="#products"
+       class="ml-auto border border-gold text-gold px-1 py-2 text-[7px] tracking-[.04em] font-bold uppercase hover:bg-gold hover:text-ink transition lg:ml-0 lg:px-5 lg:py-3 lg:text-[10px] lg:tracking-[.16em]">
+      Shop Hair Tonics
+    </a>
+
+  </div>
+</header>
+
+
+<!-- =========================================
+     HERO / IMAGE 1
+     Keyword: editorial unisex hair portrait,
+     textured hair, cinematic barber photography
+========================================= -->
+<section class="relative bg-dark text-white overflow-hidden">
+
+  <div class="grid md:grid-cols-2 min-h-[570px]">
+
+    <div class="relative z-10 flex flex-col justify-center px-7 md:px-12 lg:px-16 py-16 order-2 md:order-1">
+
+      <div class="flex items-center gap-3 mb-8">
+        <span class="w-8 h-[2px] bg-gold"></span>
+        <p class="text-gold text-[10px] font-bold tracking-[.28em] uppercase">
+          New Jersey · Small Batch · Big Attitude
+        </p>
+      </div>
+
+      <h1 class="display hero-title leading-[.78]">
+        GOOD HAIR.<br>
+        <span class="hero-title-accent text-gold">BAD ATTITUDE.</span>
+      </h1>
+
+      <p class="mt-9 max-w-sm text-sm md:text-base text-[#D4C9BC] leading-7">
+        Handcrafted hair tonics for people who refuse to blend in.
+        Less ordinary. More personality. All killer, no filler.
+      </p>
+
+      <div class="mt-9">
+        <a href="#products"
+           class="inline-flex items-center gap-5 bg-gold text-ink px-7 py-4 font-bold text-[11px] tracking-[.15em] uppercase hover:bg-white transition">
+          Discover the Goods
+          <span class="text-lg">↗</span>
+        </a>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-white/15 pt-5 text-[9px] font-bold tracking-[.16em] uppercase text-[#B9ADA1]">
+        <span>Small Batch</span>
+        <span class="text-gold">✳</span>
+        <span>New Jersey</span>
+        <span class="text-gold">✳</span>
+        <span>No Plastic Bottles</span>
+      </div>
+    </div>
+
+    <div class="relative min-h-[380px] md:min-h-full order-1 md:order-2 hero-image">
+      <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-dark/50 to-transparent"></div>
+      <div class="absolute bottom-7 right-7 text-right">
+        <p class="text-white text-[9px] tracking-[.3em] uppercase">
+          Made to stand out.
+        </p>
+      </div>
+      <div class="absolute bottom-7 left-7 hidden md:flex items-center gap-3 border border-gold/60 bg-ink/75 px-4 py-3">
+        <span class="flex h-9 w-9 items-center justify-center rounded-full border border-gold text-gold font-display text-sm">NJ</span>
+        <span>
+          <span class="block text-gold text-[9px] font-bold tracking-[.2em] uppercase">Small Batch</span>
+          <span class="block mt-1 text-white text-[9px] tracking-[.12em] uppercase">Handcrafted in New Jersey</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     BRAND STATEMENT
+========================================= -->
+<section class="bg-cream px-6 py-14 md:py-20 text-center">
+
+  <p class="text-[10px] font-bold tracking-[.3em] uppercase text-[#9A7944] mb-6">
+    A different kind of hair care
+  </p>
+
+  <h2 class="display text-5xl md:text-7xl max-w-4xl mx-auto">
+    NOT MADE FOR THE<br>
+    <span class="text-[#A67D39]">STATUS QUO.</span>
+  </h2>
+
+  <p class="max-w-xl mx-auto mt-7 text-sm leading-7 text-[#71675D]">
+    We believe great hair doesn't need complicated routines
+    or cookie-cutter products. Just thoughtfully crafted formulas
+    that let your natural texture do its thing.
+  </p>
+
+  <div class="gold-line max-w-20 mx-auto mt-9"></div>
+
+</section>
+
+
+<!-- =========================================
+     PRODUCT SECTION / IMAGE 2
+     Keyword: luxury aluminum hair tonic bottle,
+     dark editorial still life, textured stone
+========================================= -->
+<section id="products" class="bg-[#E5DED2] px-5 md:px-12 py-16 md:py-24">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="flex flex-col md:flex-row justify-between md:items-end gap-5 mb-12">
+
+      <div>
+        <p class="text-[10px] font-bold tracking-[.28em] uppercase text-[#9A7944] mb-4">
+          Meet your new favorite
+        </p>
+        <h2 class="display section-title text-7xl md:text-8xl">
+          THE<br>GOOD STUFF.
+        </h2>
+      </div>
+
+      <p class="text-sm text-[#746A60] max-w-xs leading-7">
+        Purposeful ingredients. Uncomplicated styling.
+        Hair care with a little more character.
+      </p>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- PRODUCT IMAGE 2 -->
+      <div class="product-card relative overflow-hidden bg-[#342D28] min-h-[430px] md:min-h-[550px]">
+
+        <img
+          src="hotshit.avif"
+          alt="Premium hair care product editorial"
+          class="image-cover absolute inset-0 opacity-75">
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-7 md:p-10 text-white">
+          <p class="text-gold text-[10px] tracking-[.25em] font-bold uppercase mb-3">
+            The signature formula
+          </p>
+          <h3 class="display text-6xl md:text-7xl">
+            SUPER<br>SEA SALT.
+          </h3>
+          <p class="text-sm text-white/75 mt-5 max-w-sm leading-6">
+            Texture, volume and that effortlessly undone look.
+          </p>
+          <a href="#story" class="inline-block mt-6 text-[10px] tracking-[.2em] font-bold uppercase border-b border-gold pb-2">
+            Get to know it ↗
+          </a>
+        </div>
+
+      </div>
+
+      <!-- PRODUCT INFORMATION -->
+      <div class="bg-[#332D29] text-white p-8 md:p-12 flex flex-col justify-center">
+
+        <p class="text-gold text-[10px] tracking-[.25em] uppercase font-bold">
+          What's in the mix?
+        </p>
+
+        <h3 class="display text-6xl md:text-7xl mt-7">
+          NATURE<br>
+          WITH AN<br>
+          <span class="text-gold">EDGE.</span>
+        </h3>
+
+        <div class="gold-line mt-9 mb-7"></div>
+
+        <div class="space-y-6">
+
+          <div>
+            <h4 class="font-bold text-sm">DEAD SEA SALT</h4>
+            <p class="text-xs text-[#BFB3A7] mt-2 leading-6">
+              Creates texture and helps give hair that lived-in finish.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-sm">JOJOBA & CASTOR OIL</h4>
+            <p class="text-xs text-[#BFB3A7] mt-2 leading-6">
+              Thoughtful ingredients in a formula designed for hair care.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-sm">ROSEMARY & CEDARWOOD</h4>
+            <p class="text-xs text-[#BFB3A7] mt-2 leading-6">
+              An aromatic finishing touch with its own character.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="mt-9 text-[9px] tracking-[.2em] text-gold uppercase">
+          SIMPLE ROUTINE. SERIOUS CHARACTER.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     NEW JERSEY STORY / IMAGE 3
+     Keyword: New Jersey small batch workshop,
+     artisan manufacturing, hands at work
+========================================= -->
+<section id="story" class="bg-[#302A26] text-white">
+
+  <div class="grid md:grid-cols-2">
+
+    <div class="relative min-h-[400px] md:min-h-[600px] overflow-hidden">
+
+      <img
+        src="jersey-2.jpg"
+        alt="Small batch production and craftsmanship"
+        class="image-cover absolute inset-0">
+      
+      <div class="absolute inset-0 bg-black/20"></div>
+
+      <div class="absolute top-7 left-7 border border-white/60 px-4 py-3">
+        <p class="text-[9px] tracking-[.25em] uppercase font-bold">
+          Born & mixed in NJ
+        </p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-16 md:py-24">
+
+      <p class="text-gold text-[10px] tracking-[.28em] uppercase font-bold">
+        Image 03 · The roots
+      </p>
+
+      <h2 class="display text-7xl md:text-8xl mt-7">
+        JERSEY<br>
+        <span class="text-gold">BORN.</span><br>
+        HAND<br>
+        CRAFTED.
+      </h2>
+
+      <div class="gold-line w-20 mt-8 mb-7"></div>
+
+      <p class="text-sm leading-7 text-[#D1C5B9] max-w-md">
+        Proudly rooted in New Jersey, HOTSH!T is built around
+        the art of making things with intention. Small-batch
+        production means a hands-on approach, attention to
+        detail and a whole lot of personality.
+      </p>
+
+      <p class="mt-8 text-[10px] tracking-[.2em] uppercase text-gold font-bold">
+        SMALL BATCH. NEVER BASIC.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     NO PLASTICS / IMAGE 4
+     Keyword: aluminum bottles, premium
+     sustainable packaging, minimalist still life
+========================================= -->
+<section id="difference" class="bg-[#EAE4D9]">
+
+  <div class="grid md:grid-cols-2">
+
+    <div class="flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 md:py-24 order-2 md:order-1">
+
+      <p class="text-[#9A7944] text-[10px] font-bold tracking-[.25em] uppercase">
+        A better kind of bottle
+      </p>
+
+      <h2 class="display text-7xl md:text-8xl mt-7">
+        NO<br>
+        PLASTIC.<br>
+        <span class="text-[#A77D3B]">NO<br>EXCUSES.</span>
+      </h2>
+
+      <div class="gold-line w-20 mt-8 mb-7"></div>
+
+      <p class="text-sm leading-7 text-[#71675D] max-w-md">
+        We choose aluminum bottles instead of plastic packaging.
+        A deliberate choice that reflects our belief in doing
+        things differently, right down to the details.
+      </p>
+
+      <div class="mt-9 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full border border-[#B18A4D] flex items-center justify-center text-[#A77D3B] text-xl">
+          ♻
+        </div>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider">
+            Aluminum only.
+          </p>
+          <p class="text-[10px] text-[#83776A] mt-1">
+            No plastic bottles. That's our position.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- IMAGE 4 -->
+    <div class="relative min-h-[420px] md:min-h-[620px] overflow-hidden order-1 md:order-2">
+
+      <img
+        src="purple_wide.avif"
+        alt="Minimal aluminum packaging still life"
+        class="image-cover absolute inset-0">
+
+      <div class="absolute inset-0 bg-[#332D29]/20"></div>
+
+      <div class="absolute bottom-8 right-8 bg-cream text-ink px-6 py-5 max-w-[190px]">
+        <p class="display text-4xl">LESS<br>WASTE.</p>
+        <p class="text-[9px] tracking-[.15em] uppercase mt-3">
+          More intention.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     LIFESTYLE / IMAGE 5
+     Keyword: natural textured hair, unisex
+     editorial beauty campaign, authentic portrait
+========================================= -->
+<section class="bg-[#B9A995]">
+
+  <div class="relative min-h-[480px] md:min-h-[620px] overflow-hidden">
+
+    <img
+      src="authentic.jpg"
+      alt="Authentic beauty editorial portrait"
+      class="image-cover absolute inset-0">
+
+    <div class="absolute inset-0 bg-gradient-to-r from-[#241F1B]/90 via-[#241F1B]/35 to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-8 md:px-16 py-24 md:py-36 text-white">
+
+      <p class="text-gold text-[10px] tracking-[.3em] uppercase font-bold mb-7">
+        Your hair. Your rules.
+      </p>
+
+      <h2 class="display text-7xl md:text-[112px]">
+        OWN YOUR<br>
+        <span class="text-gold">TEXTURE.</span>
+      </h2>
+
+      <p class="mt-8 max-w-sm text-sm leading-7 text-white/80">
+        No rules. No labels. No one-size-fits-all.
+        Just great hair that looks like you.
+      </p>
+
+      <a href="#products"
+         class="inline-block mt-9 border border-gold text-gold px-7 py-4 text-[10px] tracking-[.2em] font-bold uppercase hover:bg-gold hover:text-ink transition">
+        Find Your Good Hair
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     FINAL BRAND STATEMENT
+========================================= -->
+<section class="bg-ink text-white px-6 py-20 md:py-28 text-center">
+
+  <p class="text-gold text-[10px] tracking-[.3em] uppercase font-bold mb-8">
+    HOTSH!T HAIR CO.
+  </p>
+
+  <h2 class="display text-6xl md:text-9xl">
+    LESS BULLSH!T.<br>
+    <span class="text-gold">MORE GOOD HAIR.</span>
+  </h2>
+
+  <p class="text-xs text-[#B9ADA1] tracking-[.18em] uppercase mt-9">
+    HANDCRAFTED HAIR TONICS · NEW JERSEY
+  </p>
+
+  <div class="gold-line max-w-24 mx-auto mt-12"></div>
+
+  <p class="text-[9px] text-[#94877B] tracking-[.2em] uppercase mt-8">
+    MADE WITH INTENTION. WORN WITH ATTITUDE.
+  </p>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer class="bg-[#211D1A] text-[#A99D90] px-6 py-8">
+
+  <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+
+    <a href="#" class="inline-flex justify-center" aria-label="HOTSH!T Hair Co. home">
+      <img src="logo-png.png"
+           alt="HOTSH!T Hair Co."
+           class="w-24 md:w-28 h-auto object-contain">
+    </a>
+
+    <div class="w-full flex flex-col md:flex-row justify-between items-center gap-5">
+
+      <p class="text-[9px] tracking-[.2em] uppercase">
+        © 2026 HOTSH!T HAIR CO. ALL RIGHTS RESERVED.
+      </p>
+
+      <p class="text-[9px] tracking-[.2em] uppercase">
+        MADE IN NEW JERSEY · WORN EVERYWHERE
+      </p>
+
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('error', function () {
+        img.style.display = 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
